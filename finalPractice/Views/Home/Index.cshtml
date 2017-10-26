@@ -3,5 +3,27 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<style>
+    a:hover{
+        text-decoration:none;
+        background-color:aqua;
+    }
+    .mainBtn:hover .tt{
+        background-color:red;
+        display:inline-block;
+    }
+    .btn{
+        padding-top:10px;
+    }
+</style>
+
+<div style="display:inline-block; background-color:forestgreen" class="col-xs-12">
+    <div class="btn mainBtn">
+        @Html.ActionLink("Home", "Index")
+        <div class="tt" style="position:absolute;display:none">
+            @Html.ActionLink("Home", "Index")
+        </div>
+    </div>
+    @Html.ActionLink("Products", "Products")
+</div>
 
